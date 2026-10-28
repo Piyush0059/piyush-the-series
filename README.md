@@ -1,7 +1,7 @@
 # Piyush Kumar — The Series
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Piyush0059/Nagartwin/main/portfolio/assets/piyush-portrait.webp" alt="Piyush Kumar" width="210">
+  <img src="assets/piyush-casual.webp" alt="Piyush Kumar" width="210">
 </p>
 
 <h3 align="center">Aspiring Computer Engineer · Android · Evidence-aware systems · Thoughtful software</h3>
@@ -22,7 +22,7 @@
 
 ## About this portfolio
 
-A cinematic, engineering-focused portfolio that documents projects, implementation choices, and limitations—not just a list of technologies. The visual style uses dramatic dark surfaces, crimson highlights, editorial typography, animated reveals, a profile selector, horizontal project rails, and interactive case-study dialogs.
+A cinematic, engineering-focused portfolio that uses the portrait already featured in Piyush’s existing portfolio and documents projects, implementation choices, and limitations—not just a list of technologies. The visual style uses dramatic dark surfaces, crimson highlights, editorial typography, animated reveals, a profile selector, horizontal project rails, and interactive case-study dialogs.
 
 **Live website:** <https://piyush0059.github.io/piyush-the-series/>
 
