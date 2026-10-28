@@ -76,7 +76,7 @@
    </div>
    <div class="hero-art" id="heroArt" aria-label="Portrait and technology themes">
     <div class="portrait-halo"></div><div class="portrait-ring"></div>
-    <div class="hero-portrait"><img src="https://raw.githubusercontent.com/Piyush0059/Nagartwin/main/portfolio/assets/piyush-portrait.webp" alt="Portrait of Piyush Kumar" fetchpriority="high"></div>
+    <div class="hero-portrait"><img src="assets/piyush-casual.webp" alt="Portrait of Piyush Kumar" fetchpriority="high"></div>
     <div class="float-chip chip-one"><span>01</span> Kotlin / Compose</div><div class="float-chip chip-two"><span>02</span> Evidence-aware systems</div><div class="float-chip chip-three"><span>03</span> Thoughtful prototypes</div><div class="vertical-label">Curiosity → Experiments → Iteration</div>
    </div>
    <div class="hero-fade"></div>
@@ -95,7 +95,7 @@
  </div>
  <section class="section alt" id="about">
   <div class="wrap about-grid">
-   <div class="about-art reveal"><img src="https://raw.githubusercontent.com/Piyush0059/Nagartwin/main/portfolio/assets/piyush-casual.webp" alt="Piyush Kumar" loading="lazy"><div class="about-stamp"><b>CURIOUS BY DESIGN</b><small>LEARN · BUILD · QUESTION</small></div></div>
+   <div class="about-art reveal"><img src="assets/piyush-casual.webp" alt="Piyush Kumar" loading="lazy"><div class="about-stamp"><b>CURIOUS BY DESIGN</b><small>LEARN · BUILD · QUESTION</small></div></div>
    <div class="about-copy reveal"><div class="eyebrow">The pilot · About me</div><h2 class="section-title">A builder's<br><span class="serif">point of view.</span></h2><p class="quote">“The interesting part isn't only getting software to work. It's understanding <em>why it works, where it fails,</em> and who it serves.”</p><p class="section-intro">My work spans native Android interfaces, lightweight retrieval experiments, language-access tools, and scenario-planning prototypes. I tend to start with a practical question, build a working model, then look for hidden assumptions and the next thing that needs testing.</p>
     <div class="facts"><div class="fact"><small>Education</small><b>CBSE Class XII · Science (PCM)</b><span>St. Michael’s School, Patna · 2026</span></div><div class="fact"><small>Industry exposure</small><b>Software Engineering Intern</b><span>Pinnacle Labs · Jan–Apr 2025</span></div><div class="fact"><small>Primary platform</small><b>Android / Kotlin</b><span>Jetpack Compose · APIs · Gradle</span></div><div class="fact"><small>Cross-cultural learning</small><b>K-Influencer Academy Fellow</b><span>KOCIS · Mar 2026–present</span></div></div>
    </div>
@@ -196,7 +196,7 @@ function drawIntro(){var s=introSlides[introIndex];document.getElementById('intr
 function openIntro(){introIndex=0;drawIntro();introModal.classList.add('open');document.body.style.overflow='hidden';document.getElementById('introClose').focus()}
 function closeIntro(){introModal.classList.remove('open');document.body.style.overflow=''}
 document.getElementById('playIntro').addEventListener('click',openIntro);document.getElementById('introClose').addEventListener('click',closeIntro);introModal.addEventListener('click',function(e){if(e.target===introModal)closeIntro()});document.getElementById('introNext').addEventListener('click',function(){introIndex++;if(introIndex>=introSlides.length){closeIntro();showToast('End of intro — keep exploring.');return}drawIntro()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(projectModal.classList.contains('open'))closeProject();if(introModal.classList.contains('open'))closeIntro();if(!chooser.hidden){chooser.hidden=true;app.hidden=false;document.body.style.overflow='';if(previousFocus&&previousFocus.focus)previousFocus.focus()}document.getElementById('mobileNav').classList.remove('open')}if(e.key==='Enter'&&e.target===opening){showChooser()}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(projectModal.classList.contains('open'))closeProject();if(introModal.classList.contains('open'))closeIntro();if(!chooser.hidden){enterApp()}document.getElementById('mobileNav').classList.remove('open')}if(e.key==='Enter'&&e.target===opening){showChooser()}});
 var observer;function observeReveal(){if(!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')});return}if(observer)observer.disconnect();observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -25px 0px'});document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){observer.observe(el)})}
 if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var art=document.getElementById('heroArt');art.addEventListener('pointermove',function(e){var r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;var img=art.querySelector('.hero-portrait');img.style.transform='translate('+(-x*10)+'px,'+(14-y*8)+'px) rotateY('+(x*3)+'deg)'});art.addEventListener('pointerleave',function(){art.querySelector('.hero-portrait').style.transform=''})}
 if(matchMedia('(prefers-reduced-motion: reduce)').matches){opening.classList.add('skip-anim')}
